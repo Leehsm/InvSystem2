@@ -46,7 +46,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('stocklist.view') }}">
               <i class="bi bi-circle"></i><span>Add</span>
             </a>
           </li>
@@ -64,7 +64,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('stocklist.view') }}">
               <i class="bi bi-circle"></i><span>Add</span>
             </a>
           </li>
