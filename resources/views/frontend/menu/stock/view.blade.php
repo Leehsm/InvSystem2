@@ -59,28 +59,20 @@ Stock List
                                 <td>{{ $data->color }}</td>
                                 <td>{{ $data->size }}</td>
                                 <td>
-                                    <a href="{{ route('stocklist.edit',$data->id) }}" class="btn btn-info btn-sm" title="Edit Data">
-                                        Edit 
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="{{ route('stocklist.delete',$data->id) }}" class="btn btn-danger btn-sm" title="Delete Data" id="delete">
-                                        Delete
-                                    </a>
-                                </td>
-                                <td>
                                     <a href="{{ route('stockin.add', $data->id) }}" class="btn btn-success btn-sm" title="View Data">
                                         Stock in
                                     </a>
-                                </td>
-                                <td>
                                     <a href="{{ route('stockout.add', $data->id) }}" class="btn btn-warning btn-sm" title="View Data">
                                         Stock out
                                     </a>
-                                </td>
-                                <td>
                                     <a href="{{ route('stockrecord.view', $data->id) }}" class="btn btn-dark btn-sm" title="View Data">
                                         Record
+                                    </a>
+                                    <a href="{{ route('stocklist.edit',$data->id) }}" class="btn btn-info btn-sm" title="Edit Data">
+                                        Edit 
+                                    </a>
+                                    <a href="{{ route('stocklist.delete',$data->id) }}" class="btn btn-danger btn-sm" title="Delete Data" id="delete">
+                                        Delete
                                     </a>
                                 </td>
                             </tr>

@@ -36,7 +36,7 @@ Stock Record
                                 <th>
                                     Quantity
                                 </th>
-                                <th>Action</th>
+                                {{-- <th>Action</th> --}}
                             </tr>
                         </thead>
                         <tbody>
@@ -50,14 +50,14 @@ Stock Record
                                 @else
                                     <td>- {{ $data->quantity }}</td>
                                 @endif
-                                <td>
+                                {{-- <td>
                                     <a href="#" class="btn btn-info btn-sm" title="Edit Data">
                                         Edit 
                                     </a>
                                     <a href="#" class="btn btn-danger btn-sm" title="Delete Data" id="delete">
                                         Delete
                                     </a>
-                                </td>
+                                </td> --}}
                             </tr>
                             @endforeach
                         </tbody>

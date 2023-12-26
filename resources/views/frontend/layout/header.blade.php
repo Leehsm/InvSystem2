@@ -7,7 +7,7 @@
 <!-- ======= Header ======= -->
 <header id="header" class="header fixed-top d-flex align-items-center">
   <div class="d-flex align-items-center justify-content-between">
-    <a href="#" class="logo d-flex align-items-center">
+    <a href="{{ route('stocklist.view') }}" class="logo d-flex align-items-center">
       <img src="{{ asset('assets/img/sahira.png')}}" alt="">
       <span class="d-none d-lg-block">Inventory</span>
     </a>
