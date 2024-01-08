@@ -181,7 +181,8 @@ class FrontendController extends Controller
     }
 
     public function stockrecordView($id){
-        $record = Record::get();
+        // dd($id);
+        $record = Record::where('stock_id', $id)->get();
         return view('frontend.menu.stock.record', compact('record'));
     }
     

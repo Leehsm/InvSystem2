@@ -43,15 +43,12 @@ Stock List
                                     Size
                                 </th>
                                 <th>Action</th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($stocklist as $data)
                             <tr>
+                                <input type="hidden" name="stock_id" value={{ $data->id }}>
                                 <td>{{ $data->date }}</td>
                                 <td>{{ $data->name }}</td>
                                 <td>{{ $data->quantity }}</td>
