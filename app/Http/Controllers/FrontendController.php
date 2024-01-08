@@ -101,11 +101,14 @@ class FrontendController extends Controller
             'stock_id' => $req->stock_id,
             'name' => $req->stock_name,
             'quantity' => $req->quantity,
+            'note' => $req->note,
             'created_at' => Carbon::now(),
         ]);
 
         $stock = Stock::where('id', $req->stock_id)->sum('quantity');
         // dd($stock - $req->quantity);
+
+        //update total value of stock quantity for Stock DB
         $stockupdate = $stock + $req->quantity;
         Stock::findOrFail($req->stock_id)->update([
             'quantity' => $stockupdate,
@@ -121,6 +124,7 @@ class FrontendController extends Controller
             'name' => $req->stock_name,
             'inout' => 'In',
             'quantity' => $req->quantity,
+            'note' => $req->note,
             'created_at' => Carbon::now(),
         ]);
 
@@ -146,11 +150,14 @@ class FrontendController extends Controller
             'stock_id' => $req->stock_id,
             'name' => $req->stock_name,
             'quantity' => $req->quantity,
+            'note' => $req->note,
             'created_at' => Carbon::now(),
         ]);
 
         $stock = Stock::where('id', $req->stock_id)->sum('quantity');
         // dd($stock - $req->quantity);
+
+        //update total value of stock quantity for Stock DB
         $stockupdate = $stock - $req->quantity;
         Stock::findOrFail($req->stock_id)->update([
             'quantity' => $stockupdate,
@@ -166,6 +173,7 @@ class FrontendController extends Controller
             'name' => $req->stock_name,
             'inout' => 'Out',
             'quantity' => $req->quantity,
+            'note' => $req->note,
             'created_at' => Carbon::now(),
         ]);
 

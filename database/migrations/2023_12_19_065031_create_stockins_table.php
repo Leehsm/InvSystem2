@@ -18,6 +18,7 @@ class CreateStockinsTable extends Migration
             $table->integer('stock_id');
             $table->string('name');
             $table->string('quantity')->nullable();
+            $table->string('note');
             $table->timestamps();
         });
     }

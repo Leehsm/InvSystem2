@@ -20,6 +20,7 @@ class CreateRecordsTable extends Migration
             $table->string('name')->nullable();
             $table->string('inout')->nullable();
             $table->string('quantity')->nullable();
+            $table->string('note');
             $table->timestamps();
         });
     }

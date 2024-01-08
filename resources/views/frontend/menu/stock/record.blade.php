@@ -7,11 +7,15 @@ Stock Record
 <div class="pagetitle">
     <h1>Stock Record</h1>
     <nav>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item">Stock Record</li>
-        <li class="breadcrumb-item active">View</li>
-      </ol>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">Stock Record</li>
+            <li class="breadcrumb-item active">View</li>
+        </ol>
+        <ul>
+            <a href="index.html" class="btn btn-success">Download Records</a>
+        </ul>
+        
     </nav>
 </div><!-- End Page Title -->
 
@@ -36,6 +40,9 @@ Stock Record
                                 <th>
                                     Quantity
                                 </th>
+                                <th>
+                                    Note
+                                </th>
                                 {{-- <th>Action</th> --}}
                             </tr>
                         </thead>
@@ -45,11 +52,18 @@ Stock Record
                                 <td>{{ $data->created_at }}</td>
                                 <td>{{ $data->name }}</td>
                                 <td>{{ $data->inout }}</td>
-                                @if ($data->inout == 'In')
-                                    <td>+ {{ $data->quantity }}</td>
-                                @else
-                                    <td>- {{ $data->quantity }}</td>
-                                @endif
+                                <td>
+                                    @if ($data->inout == 'In')
+                                        <a style="color:green;">+ {{ $data->quantity }}</a>
+                                    @else
+                                        <a style="color:red;">- {{ $data->quantity }}</a>
+                                    @endif
+                                </td>
+                                <td>
+                                    {{ $data->note }}
+                                </td>
+                                
+
                                 {{-- <td>
                                     <a href="#" class="btn btn-info btn-sm" title="Edit Data">
                                         Edit 

@@ -33,6 +33,9 @@ Stock Out
                                 <th>
                                     Quantity
                                 </th>
+                                <th>
+                                    Note
+                                </th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -42,6 +45,7 @@ Stock Out
                                 <td>{{ $data->created_at }}</td>
                                 <td>{{ $data->name }}</td>
                                 <td>- {{ $data->quantity }}</td>
+                                <td>{{ $data->note }}</td>
                                 <td>
                                     <a href="#" class="btn btn-info btn-sm" title="Edit Data">
                                         Edit 
