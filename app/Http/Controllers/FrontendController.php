@@ -38,6 +38,25 @@ class FrontendController extends Controller
             'created_at' => Carbon::now(),
         ]);
 
+        // dd($stock_id);
+        //stockin update
+        $stockin = Stockin::insertGetId([
+            'stock_id' => $stock_id,
+            'name' => $req->name,
+            'quantity' => $req->quantity,
+            // 'note' => $req->note,
+            'created_at' => Carbon::now(),
+        ]);
+
+        Record::insertGetId([
+            'stock_id' => $stock_id,
+            'name' => $req->name,
+            'inout' => 'In',
+            'quantity' => $req->quantity,
+            'note' => "1st",
+            'created_at' => Carbon::now(),
+        ]);
+
         $notification = array(
 			'message' => 'Stock Inserted Successfully',
 			'alert-type' => 'success'
